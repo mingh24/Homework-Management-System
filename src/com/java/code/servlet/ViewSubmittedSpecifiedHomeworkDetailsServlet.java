@@ -20,8 +20,8 @@ import java.util.List;
  * @date 2020/3/13
  * @since 0.0.1
  */
-@WebServlet("/viewSubmittedSpecifiedHomeworkDetails")
-public class ViewSubmittedSpecifiedHomeworkDetails extends HttpServlet {
+@WebServlet("/teacher/viewSubmittedSpecifiedHomeworkDetails")
+public class ViewSubmittedSpecifiedHomeworkDetailsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 设置响应内容编码，防止乱码

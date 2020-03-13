@@ -14,7 +14,7 @@
 <body>
 <h1 style="text-align: center;margin-top: 100px;margin-bottom: 50px">输入作业信息</h1>
 <div align="center">
-    <form action="${pageContext.request.contextPath}/addHomework" method="post">
+    <form action="${pageContext.request.contextPath}/teacher/addHomework" method="post">
         <table style="border-collapse:separate;border-spacing:10px 20px;">
             <tr>
                 <th>作业标题：</th>

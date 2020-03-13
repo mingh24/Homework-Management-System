@@ -14,7 +14,7 @@
 <body>
 <h1 style="text-align: center;margin-top: 100px;margin-bottom: 50px">输入学生信息</h1>
 <div align="center">
-    <form action="${pageContext.request.contextPath}/addStudent" method="post">
+    <form action="${pageContext.request.contextPath}/teacher/addStudent" method="post">
         <table style="border-collapse:separate;border-spacing:0 20px;">
             <tr>
                 <th>学号：</th>

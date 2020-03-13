@@ -15,7 +15,7 @@
 <body>
 <h1 style="text-align: center;margin-top: 100px;margin-bottom: 50px">提交作业</h1>
 <div align="center">
-    <form action="${pageContext.request.contextPath}/submitHomework" method="post">
+    <form action="${pageContext.request.contextPath}/student/submitHomework" method="post">
         <table style="border-collapse:separate;border-spacing:10px 20px;">
             <% Homework homework = (Homework) request.getAttribute("specifiedHomework"); %>
             <tr>

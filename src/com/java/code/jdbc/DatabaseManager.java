@@ -6,11 +6,10 @@ import com.java.code.model.StudentHomework;
 
 import java.sql.*;
 import java.util.*;
-import java.util.Date;
 
 /**
  * Project Name: Homework Management System
- * File Name: StudentHomeworkJdbc
+ * File Name: DatabaseManager
  * Package Name: com.java.code.jdbc
  *
  * @author yipple
@@ -222,17 +221,4 @@ public class DatabaseManager {
         return studentHomeworkList;
     }
 
-    public static void main(String[] args) {
-
-        Student student1 = new Student();
-        student1.setId((long) 17301005);
-        student1.setName("小华");
-        student1.setCreateTime(new Date());
-
-        System.out.println(new Date());
-
-        System.out.println(DatabaseManager.addStudent(student1));
-
-
-    }
 }

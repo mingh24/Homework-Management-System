@@ -1,12 +1,12 @@
 <%@ page import="com.java.code.model.Homework" %>
-<%@ page import="java.util.List" %>
 <%@ page import="com.java.code.jdbc.DatabaseManager" %>
+<%@ page import="java.util.List" %>
 
 <%--
   Created by IntelliJ IDEA.
   User: yipple
-  Date: 2020/3/12
-  Time: 19:39
+  Date: 2020/3/13
+  Time: 11:15
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-<form id="homeworkForm" action="${pageContext.request.contextPath}/submitHomework" method="get">
+<form id="homeworkForm" action="${pageContext.request.contextPath}/teacher/viewSubmittedSpecifiedHomeworkDetails" method="get">
     <table align="center" width="960" border="1"
            bgcolor="black" cellpadding="1" cellspacing="1">
         <tr align="center" bgcolor="#63B8FF" height="50">
@@ -55,7 +55,7 @@
                 <%=homework.getCreateTime()%>
             </td>
             <td>
-                <input type="button" value="提交作业" onclick="sendHomeworkId(<%=homework.getId()%>)">
+                <input type="button" value="查看详情" onclick="sendHomeworkId(<%=homework.getId()%>)">
             </td>
         </tr>
         <%
@@ -65,7 +65,7 @@
     </table>
     <input type="hidden" id="hiddenRecorder" name="specifiedHomeworkId">
 </form>
-<p style="text-align: center;margin-top: 50px"><a href="studentHome.jsp">返回首页</a></p>
+<p style="text-align: center;margin-top: 50px"><a href="../student/studentHome.jsp">返回首页</a></p>
 </body>
 
 </html>

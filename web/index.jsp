@@ -19,7 +19,7 @@
 <h1 style="text-align: center;margin-top: 150px">欢迎来到作业管理系统</h1>
 <h2 style="text-align: center;margin-bottom: 50px">请选择您的身份：</h2>
 
-<p style="text-align: center"><a href="teacherHome.jsp">我是老师</a></p>
-<p style="text-align: center"><a href="studentHome.jsp">我是学生</a></p>
+<p style="text-align: center"><a href="teacher/teacherHome.jsp">我是老师</a></p>
+<p style="text-align: center"><a href="student/studentHome.jsp">我是学生</a></p>
 </body>
 </html>

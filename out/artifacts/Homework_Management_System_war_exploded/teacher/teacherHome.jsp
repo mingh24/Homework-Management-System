@@ -19,6 +19,6 @@
 <p style="text-align: center"><a href="queryAllStudents.jsp">查看所有学生</a></p>
 <p style="text-align: center"><a href="addHomework.jsp">布置作业</a></p>
 <p style="text-align: center"><a href="teacherQueryAllHomework.jsp">查看所有作业</a></p>
-<p style="text-align: center"><a href="index.jsp">返回系统首页</a></p>
+<p style="text-align: center"><a href="../index.jsp">返回系统首页</a></p>
 </body>
 </html>

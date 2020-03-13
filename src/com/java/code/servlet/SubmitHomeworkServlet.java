@@ -21,7 +21,7 @@ import java.util.Date;
  * @date 2020/3/12
  * @since 0.0.1
  */
-@WebServlet("/submitHomework")
+@WebServlet("/student/submitHomework")
 public class SubmitHomeworkServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -52,6 +52,6 @@ public class SubmitHomeworkServlet extends HttpServlet {
         req.setAttribute("operation", "submitHomework");
         boolean result = DatabaseManager.submitStudentHomework(studentHomework);
         req.setAttribute("result", result);
-        req.getRequestDispatcher("result.jsp").forward(req, resp);
+        req.getRequestDispatcher("../result.jsp").forward(req, resp);
     }
 }
