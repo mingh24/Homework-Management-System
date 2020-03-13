@@ -20,20 +20,20 @@
 ### 项目结构
 
 - src
-  ![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/master/pictures/src包结构.png)
+  ![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/master/images/src包结构.png)
 
 <center>src包结构</center>
 
 <br>
 
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/master/pictures/类图.png)
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/master/images/类图.png)
 
 <center>类图</center>
 
 <br>
 
 - web
-  ![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/master/pictures/web包结构.png)
+  ![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/master/images/web包结构.png)
 
 <center>web包结构</center>
 
@@ -41,7 +41,7 @@
 
 ### 数据库设计
 
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/master/pictures/数据库结构.png)
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/master/images/数据库结构.png)
 
 <center>数据库结构</center>
 
@@ -49,7 +49,7 @@
 
 ### 交互结构
 
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/master/pictures/交互设计.png)
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/master/images/交互设计.png)
 
 <center>交互设计</center>
 
