@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Project Name: Homework Management System
  * File Name: DatabaseManager
- * Package Name: com.java.code.com.java.code.jdbc
+ * Package Name: com.java.code.jdbc
  *
  * @author yipple
  * @date 2020/3/12
@@ -19,35 +19,12 @@ import java.util.List;
  */
 public class DatabaseManager {
 
-    private static final String DATABASE_NAME = "school";
-
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/" + DATABASE_NAME + "?&useSSL=false&serverTimezone=Asia/Shanghai";
-
-    private static final String USER = "yisql";
-
-    private static final String PASSWORD = "Yiang2MySQL";
-
-    private static final String DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
-
-    private static void loadDriver() {
-
-        try {
-            // 加载驱动
-            Class.forName(DRIVER_NAME);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-    }
-
     public static boolean addStudent(Student student) {
 
         String sqlString = "INSERT INTO s_student(id, name, create_time) values(?, ?, ?)";
 
-        loadDriver();
-
         int updatedRowNum = 0;
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
             try (PreparedStatement preparedStatement = connection.prepareStatement(sqlString)) {
                 preparedStatement.setLong(1, student.getId());
                 preparedStatement.setString(2, student.getName());
@@ -66,10 +43,8 @@ public class DatabaseManager {
 
         String sqlString = "SELECT * FROM s_student ORDER BY id, name, create_time";
 
-        loadDriver();
-
         List<Student> studentList = new ArrayList<>();
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
             try (Statement statement = connection.createStatement()) {
                 try (ResultSet resultSet = statement.executeQuery(sqlString)) {
                     // 获取执行结果
@@ -94,10 +69,8 @@ public class DatabaseManager {
 
         String sqlString = "INSERT INTO s_homework(title, content, create_time) values(?, ?, ?)";
 
-        loadDriver();
-
         int updatedRowNum = 0;
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
             try (PreparedStatement preparedStatement = connection.prepareStatement(sqlString)) {
                 preparedStatement.setString(1, homework.getTitle());
                 preparedStatement.setString(2, homework.getContent());
@@ -116,10 +89,8 @@ public class DatabaseManager {
 
         String sqlString = "INSERT INTO s_student_homework(student_id, homework_id, homework_title, homework_content, create_time) values(?, ?, ?, ?, ?)";
 
-        loadDriver();
-
         int updatedRowNum = 0;
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
             try (PreparedStatement preparedStatement = connection.prepareStatement(sqlString)) {
                 preparedStatement.setLong(1, studentHomework.getStudentId());
                 preparedStatement.setLong(2, studentHomework.getHomeworkId());
@@ -140,10 +111,8 @@ public class DatabaseManager {
 
         String sqlString = "SELECT * FROM s_homework ORDER BY id, title, content, create_time";
 
-        loadDriver();
-
         List<Homework> homeworkList = new ArrayList<>();
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
             try (Statement statement = connection.createStatement()) {
                 try (ResultSet resultSet = statement.executeQuery(sqlString)) {
                     // 获取执行结果
@@ -169,10 +138,8 @@ public class DatabaseManager {
 
         String sqlString = "SELECT * FROM s_homework WHERE id=" + specifiedHomeworkId;
 
-        loadDriver();
-
         Homework specifiedHomework = new Homework();
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
             try (Statement statement = connection.createStatement()) {
                 try (ResultSet resultSet = statement.executeQuery(sqlString)) {
                     // 获取执行结果
@@ -196,10 +163,8 @@ public class DatabaseManager {
 
         String sqlString = "SELECT * FROM s_student_homework WHERE homework_id=" + specifiedHomeworkId + " ORDER BY id, student_id, homework_id, homework_title, homework_content, create_time";
 
-        loadDriver();
-
         List<StudentHomework> studentHomeworkList = new ArrayList<>();
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
             try (Statement statement = connection.createStatement()) {
                 try (ResultSet resultSet = statement.executeQuery(sqlString)) {
                     // 获取执行结果

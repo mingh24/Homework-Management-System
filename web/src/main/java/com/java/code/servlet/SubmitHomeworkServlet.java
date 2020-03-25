@@ -1,4 +1,4 @@
-package org.example.controller.servlet;
+package com.java.code.servlet;
 
 import com.java.code.jdbc.DatabaseManager;
 import com.java.code.model.Homework;

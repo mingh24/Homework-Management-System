@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Project Name: Homework Management System
  * File Name: Homework
- * Package Name: com.java.code.com.java.code.model
+ * Package Name: com.java.code.model
  *
  * @author yipple
  * @date 2020/3/12

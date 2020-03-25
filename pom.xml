@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
+    <groupId>com.java</groupId>
     <artifactId>Homework-Management-System</artifactId>
     <packaging>pom</packaging>
     <version>0.1</version>
@@ -12,7 +12,6 @@
     <modules>
         <module>core</module>
         <module>db</module>
-        <module>web</module>
         <module>web</module>
     </modules>
     <dependencyManagement>
@@ -33,12 +32,12 @@
                 <version>8.0.19</version>
             </dependency>
             <dependency>
-                <groupId>org.example</groupId>
+                <groupId>com.java</groupId>
                 <artifactId>core</artifactId>
                 <version>0.1</version>
             </dependency>
             <dependency>
-                <groupId>org.example</groupId>
+                <groupId>com.java</groupId>
                 <artifactId>db</artifactId>
                 <version>0.1</version>
             </dependency>

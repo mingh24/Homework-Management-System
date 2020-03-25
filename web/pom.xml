@@ -6,7 +6,7 @@
 
     <parent>
         <artifactId>Homework-Management-System</artifactId>
-        <groupId>org.example</groupId>
+        <groupId>com.java</groupId>
         <version>0.1</version>
     </parent>
 
@@ -37,13 +37,13 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.example</groupId>
+            <groupId>com.java</groupId>
             <artifactId>core</artifactId>
             <version>0.1</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.example</groupId>
+            <groupId>com.java</groupId>
             <artifactId>db</artifactId>
             <version>0.1</version>
             <scope>compile</scope>

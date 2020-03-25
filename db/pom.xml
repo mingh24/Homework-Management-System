@@ -6,7 +6,7 @@
 
     <parent>
         <artifactId>Homework-Management-System</artifactId>
-        <groupId>org.example</groupId>
+        <groupId>com.java</groupId>
         <version>0.1</version>
     </parent>
 
@@ -32,7 +32,7 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.example</groupId>
+            <groupId>com.java</groupId>
             <artifactId>core</artifactId>
             <version>0.1</version>
         </dependency>
