@@ -8,20 +8,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a130c784-7118-4dd0-be91-feb643268316" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework-Management-System.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/db/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/java/code/jdbc/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/com/java/code/jdbc/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/java/code/jdbc/DatabasePool.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/com/java/code/jdbc/DatabasePool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/java/code/model/Homework.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/com/java/code/model/Homework.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/java/code/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/com/java/code/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/java/code/model/StudentHomework.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/com/java/code/model/StudentHomework.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/example/controller/servlet/AddHomeworkServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/servlet/AddHomeworkServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/example/controller/servlet/AddStudentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/servlet/AddStudentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/example/controller/servlet/SubmitHomeworkServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/servlet/SubmitHomeworkServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/example/controller/servlet/ViewSubmittedSpecifiedHomeworkDetailsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/servlet/ViewSubmittedSpecifiedHomeworkDetailsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/JSP和Servlet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Servlet架构.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Servlet生命周期.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/src包之间的关系.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/src包结构.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/web包结构.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/交互设计.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/类图.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
