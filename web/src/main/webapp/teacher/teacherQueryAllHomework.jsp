@@ -1,5 +1,4 @@
 <%@ page import="com.java.code.model.Homework" %>
-<%@ page import="com.java.code.jdbc.DatabaseManager" %>
 <%@ page import="java.util.List" %>
 
 <%--
