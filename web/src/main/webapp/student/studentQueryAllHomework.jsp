@@ -1,6 +1,5 @@
 <%@ page import="com.java.code.model.Homework" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.java.code.jdbc.DatabaseManager" %>
 
 <%--
   Created by IntelliJ IDEA.

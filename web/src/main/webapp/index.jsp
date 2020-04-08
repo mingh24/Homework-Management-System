@@ -1,7 +1,3 @@
-<%@ page import="com.java.code.jdbc.DatabaseManager" %>
-<%@ page import="com.java.code.model.StudentHomework" %>
-<%@ page import="java.util.List" %>
-
 <%--
   Created by IntelliJ IDEA.
   User: yipple
