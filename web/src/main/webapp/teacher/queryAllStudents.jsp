@@ -24,7 +24,7 @@
         <td>创建时间</td>
     </tr>
     <%
-        List<Student> studentList = DatabaseManager.queryAllStudents();
+        List<Student> studentList = (List<Student>) request.getAttribute("studentList");
         if (null == studentList || studentList.size() <= 0) {
     %>
     <p style="text-align: center">无相关记录</p>

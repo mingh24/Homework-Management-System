@@ -33,7 +33,7 @@
             <td></td>
         </tr>
         <%
-            List<Homework> homeworkList = DatabaseManager.queryAllHomework();
+            List<Homework> homeworkList = (List<Homework>) request.getAttribute("homeworkList");
             if (null == homeworkList || homeworkList.size() <= 0) {
         %>
         <p style="text-align: center">无相关记录</p>

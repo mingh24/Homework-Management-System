@@ -15,7 +15,7 @@
 <h1 style="text-align: center;margin-top: 150px">欢迎<b>同学</b>!</h1>
 <h2 style="text-align: center;margin-bottom: 50px">您可以进行以下操作：</h2>
 
-<p style="text-align: center"><a href="studentQueryAllHomework.jsp">查看所有作业</a></p>
+<p style="text-align: center"><a href="studentQueryAllHomework">查看所有作业</a></p>
 <p style="text-align: center"><a href="../index.jsp">返回系统首页</a></p>
 </body>
 </html>
