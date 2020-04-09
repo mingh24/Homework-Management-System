@@ -27,7 +27,7 @@
 <br>
 
 - jdbc包结构
-  ![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/2.x/images/jdbc包结构.png)
+  ![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/4.x/images/4.x%20jdbc包结构.png)
 
 <br>
 
@@ -38,7 +38,7 @@
 <br>
 
 - controller包结构
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/3.x/images/3.x%20Controller包结构.png)
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/3.x/images/3.x%20controller包结构.png)
 
 <br>
 
