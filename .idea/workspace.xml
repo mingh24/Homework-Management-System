@@ -10,26 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a130c784-7118-4dd0-be91-feb643268316" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/db_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/java/code/jdbc/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/jdbc/TeacherDatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/java/code/jdbc/DatabasePool.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/jdbc/DatabasePool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/java/code/model/Homework.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/model/Homework.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/java/code/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/java/code/model/StudentHomework.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/model/StudentHomework.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/student/studentQueryAllHomework.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/student/studentQueryAllHomework.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/teacher/queryAllStudents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/teacher/queryAllStudents.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/teacher/teacherQueryAllHomework.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/teacher/teacherQueryAllHomework.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/teacher/viewSubmittedSpecifiedHomeworkDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/teacher/viewSubmittedSpecifiedHomeworkDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/web/student/studentQueryAllHomework.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/student/studentQueryAllHomework.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/web/teacher/queryAllStudents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/teacher/queryAllStudents.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/web/teacher/teacherQueryAllHomework.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/teacher/teacherQueryAllHomework.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/web/teacher/viewSubmittedSpecifiedHomeworkDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/teacher/viewSubmittedSpecifiedHomeworkDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +215,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
