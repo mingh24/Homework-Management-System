@@ -9,6 +9,7 @@
  - Java SE 11.0.5 LTS
  - MySQL 8.0.19
  - MySQL Connector for Java 8.0.19
+ - HikariCP 3.4.2
  - Apache-Tomcat 8.5.51
  - Apache-Maven 3.6.1
 
