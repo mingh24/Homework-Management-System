@@ -1,6 +1,6 @@
 # Homework-Management-System
 
-一个基于Tomcat, Servlet, JSP的简单作业管理系统，通过Maven管理依赖，使用HikariCP数据库连接池。
+一个基于Tomcat, Spring, JSP的简单作业管理系统，通过Maven管理依赖，使用HikariCP数据库连接池。
 
 ## 环境
 
@@ -38,7 +38,7 @@
 <br>
 
 - controller包结构
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/3.x/images/3.x%20Controller包结构.png)
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/3.x/images/3.x%20controller包结构.png)
 
 <br>
 
