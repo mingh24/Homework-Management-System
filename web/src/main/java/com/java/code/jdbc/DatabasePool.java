@@ -3,6 +3,10 @@ package com.java.code.jdbc;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 /**
  * Project Name: Homework-Management-System
  * File Name: DatabasePool
@@ -16,28 +20,45 @@ public class DatabasePool {
 
     private static HikariDataSource hikariDataSource;
 
-    private static final String DATABASE_NAME = "school";
+    private static String url;
 
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/" + DATABASE_NAME + "?&useSSL=false&serverTimezone=Asia/Shanghai";
+    private static String userName;
 
-    private static final String USER_NAME = "yisql";
+    private static String password;
 
-    private static final String PASSWORD = "Yiang2MySQL";
+    private static String driverName;
 
-    private static final String DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
+    static {
+        try {
+            readProperties();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void readProperties() throws IOException {
+        InputStream inputStream = DatabasePool.class.getClassLoader().getResourceAsStream("database.properties");
+        Properties properties = new Properties();
+        properties.load(inputStream);
+
+        url = properties.getProperty("url");
+        userName = properties.getProperty("user_name");
+        password = properties.getProperty("password");
+        driverName = properties.getProperty("driver_name");
+    }
 
     public static HikariDataSource getHikariDataSource() {
-
-        if (null != hikariDataSource)
+        if (null != hikariDataSource) {
             return hikariDataSource;
+        }
 
         synchronized (DatabasePool.class) {
             if (null == hikariDataSource) {
                 HikariConfig hikariConfig = new HikariConfig();
-                hikariConfig.setJdbcUrl(URL);
-                hikariConfig.setUsername(USER_NAME);
-                hikariConfig.setPassword(PASSWORD);
-                hikariConfig.setDriverClassName(DRIVER_NAME);
+                hikariConfig.setJdbcUrl(url);
+                hikariConfig.setUsername(userName);
+                hikariConfig.setPassword(password);
+                hikariConfig.setDriverClassName(driverName);
                 hikariDataSource = new HikariDataSource(hikariConfig);
 
                 return hikariDataSource;
@@ -45,7 +66,6 @@ public class DatabasePool {
         }
 
         return hikariDataSource;
-
     }
 
 }
