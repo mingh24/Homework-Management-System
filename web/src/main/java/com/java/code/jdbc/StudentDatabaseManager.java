@@ -2,8 +2,6 @@ package com.java.code.jdbc;
 
 import com.java.code.model.Homework;
 import com.java.code.model.StudentHomework;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import java.sql.*;
 import java.util.ArrayList;
