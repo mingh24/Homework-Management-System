@@ -1,5 +1,6 @@
 package com.java.code.controller;
 
+import com.java.code.configuration.AppConfig;
 import com.java.code.jdbc.StudentDatabaseManager;
 import com.java.code.model.Homework;
 import com.java.code.model.StudentHomework;
@@ -27,8 +28,8 @@ import java.util.List;
 @RequestMapping("/student")
 public class StudentController {
 
-    ApplicationContext applicationContext = new AnnotationConfigApplicationContext(StudentDatabaseManager.class);
-    StudentDatabaseManager studentDatabaseManager = (StudentDatabaseManager) applicationContext.getBean("getStudentDatabaseManager");
+    ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+    StudentDatabaseManager studentDatabaseManager = applicationContext.getBean("studentDatabaseManager", StudentDatabaseManager.class);
 
     @RequestMapping(value = "/studentQueryAllHomework")
     private String studentQueryAllHomework(Model model) {

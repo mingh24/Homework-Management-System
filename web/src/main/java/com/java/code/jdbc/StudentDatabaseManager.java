@@ -18,13 +18,7 @@ import java.util.List;
  * @date 2020/4/6
  * @since 0.0.1
  */
-@Configuration
 public class StudentDatabaseManager {
-
-    @Bean
-    public StudentDatabaseManager getStudentDatabaseManager() {
-        return new StudentDatabaseManager();
-    }
 
     public boolean submitStudentHomework(StudentHomework studentHomework) {
 

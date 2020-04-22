@@ -19,13 +19,7 @@ import java.util.List;
  * @date 2020/4/6
  * @since 0.0.1
  */
-@Configuration
 public class TeacherDatabaseManager {
-
-    @Bean
-    public TeacherDatabaseManager getTeacherDatabaseManager() {
-        return new TeacherDatabaseManager();
-    }
 
     public boolean addStudent(Student student) {
 

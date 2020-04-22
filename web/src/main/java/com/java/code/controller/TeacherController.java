@@ -1,5 +1,6 @@
 package com.java.code.controller;
 
+import com.java.code.configuration.AppConfig;
 import com.java.code.jdbc.TeacherDatabaseManager;
 import com.java.code.model.Homework;
 import com.java.code.model.Student;
@@ -28,8 +29,8 @@ import java.util.List;
 @RequestMapping("/teacher")
 public class TeacherController {
 
-    ApplicationContext applicationContext = new AnnotationConfigApplicationContext(TeacherDatabaseManager.class);
-    TeacherDatabaseManager teacherDatabaseManager = (TeacherDatabaseManager) applicationContext.getBean("getTeacherDatabaseManager");
+    ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+    TeacherDatabaseManager teacherDatabaseManager = applicationContext.getBean("teacherDatabaseManager", TeacherDatabaseManager.class);
 
     @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
     private String addStudent(@RequestParam(value = "id") String id, @RequestParam(value = "name") String name, Model model) {
