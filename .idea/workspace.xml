@@ -29,11 +29,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a130c784-7118-4dd0-be91-feb643268316" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/4.x项目结构.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/4.x项目结构.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/jdbc/StudentDatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/jdbc/StudentDatabaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/jdbc/TeacherDatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/jdbc/TeacherDatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +257,7 @@
       <workItem from="1587526941473" duration="374000" />
       <workItem from="1587527851772" duration="39000" />
       <workItem from="1587527904990" duration="152000" />
-      <workItem from="1587528080492" duration="2103000" />
+      <workItem from="1587528080492" duration="3966000" />
     </task>
     <servers />
   </component>

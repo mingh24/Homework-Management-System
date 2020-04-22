@@ -4,8 +4,8 @@
 
 ## 环境
 
- - macOS Catalina 10.15.3
- - IntelliJ IDEA Ultimate 2019.3.4
+ - macOS Catalina 10.15.4
+ - IntelliJ IDEA Ultimate 2020.1
  - Java SE 11.0.5 LTS
  - MySQL 8.0.19
  - MySQL Connector for Java 8.0.19
@@ -26,6 +26,16 @@
 
 <br>
 
+- configuration包结构
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/4.x/images/4.x%20configuration包结构.png)
+
+<br>
+
+- controller包结构
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/3.x/images/3.x%20controller包结构.png)
+
+<br>
+
 - jdbc包结构
   ![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/4.x/images/4.x%20jdbc包结构.png)
 
@@ -37,11 +47,6 @@
 
 <br>
 
-- controller包结构
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/3.x/images/3.x%20controller包结构.png)
-
-<br>
-
 ### 数据库设计
 
 ![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/2.x/images/数据库结构.png)
@@ -50,6 +55,6 @@
 
 ### 交互结构
 
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/2.x/images/2.x交互设计.png)
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/4.x/images/4.x交互设计.png)
 
 <br>
