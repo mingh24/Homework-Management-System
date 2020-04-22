@@ -1,11 +1,8 @@
 package com.java.code.controller;
 
-import com.java.code.configuration.AppConfig;
 import com.java.code.service.StudentService;
 import com.java.code.entity.Homework;
 import com.java.code.entity.StudentHomework;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,8 +25,11 @@ import java.util.List;
 @RequestMapping("/student")
 public class StudentController {
 
-    ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-    StudentService studentService = applicationContext.getBean("studentService", StudentService.class);
+    private final StudentService studentService;
+
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
+    }
 
     @RequestMapping(value = "/studentQueryAllHomework")
     private String studentQueryAllHomework(Model model) {

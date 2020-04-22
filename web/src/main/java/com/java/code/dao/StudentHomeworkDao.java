@@ -2,6 +2,7 @@ package com.java.code.dao;
 
 import com.java.code.entity.StudentHomework;
 import com.java.code.jdbc.DatabasePool;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import java.util.List;
  * @date 2020/4/22
  * @since 0.0.1
  */
+@Repository
 public class StudentHomeworkDao implements StudentHomeworkDaoInterface {
 
     @Override

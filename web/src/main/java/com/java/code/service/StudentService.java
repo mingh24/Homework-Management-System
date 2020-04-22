@@ -1,7 +1,7 @@
 package com.java.code.service;
 
-import com.java.code.dao.HomeworkDao;
-import com.java.code.dao.StudentHomeworkDao;
+import com.java.code.dao.HomeworkDaoInterface;
+import com.java.code.dao.StudentHomeworkDaoInterface;
 import com.java.code.entity.Homework;
 import com.java.code.entity.StudentHomework;
 import org.springframework.stereotype.Service;
@@ -17,10 +17,17 @@ import java.util.List;
  * @date 2020/4/6
  * @since 0.0.1
  */
+@Service
 public class StudentService {
 
-    private HomeworkDao homeworkDao = new HomeworkDao();
-    private StudentHomeworkDao studentHomeworkDao = new StudentHomeworkDao();
+    private final HomeworkDaoInterface homeworkDao;
+
+    private final StudentHomeworkDaoInterface studentHomeworkDao;
+
+    public StudentService(HomeworkDaoInterface homeworkDao, StudentHomeworkDaoInterface studentHomeworkDao) {
+        this.homeworkDao = homeworkDao;
+        this.studentHomeworkDao = studentHomeworkDao;
+    }
 
     public boolean submitStudentHomework(StudentHomework studentHomework) {
         return studentHomeworkDao.addStudentHomework(studentHomework);

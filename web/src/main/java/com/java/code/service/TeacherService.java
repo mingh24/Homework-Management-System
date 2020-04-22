@@ -1,8 +1,6 @@
 package com.java.code.service;
 
-import com.java.code.dao.HomeworkDao;
-import com.java.code.dao.StudentDao;
-import com.java.code.dao.StudentHomeworkDao;
+import com.java.code.dao.*;
 import com.java.code.entity.Homework;
 import com.java.code.entity.Student;
 import com.java.code.entity.StudentHomework;
@@ -19,11 +17,20 @@ import java.util.List;
  * @date 2020/4/6
  * @since 0.0.1
  */
+@Service
 public class TeacherService {
 
-    private HomeworkDao homeworkDao = new HomeworkDao();
-    private StudentDao studentDao = new StudentDao();
-    private StudentHomeworkDao studentHomeworkDao = new StudentHomeworkDao();
+    private final HomeworkDaoInterface homeworkDao;
+
+    private final StudentDaoInterface studentDao;
+
+    private final StudentHomeworkDaoInterface studentHomeworkDao;
+
+    public TeacherService(HomeworkDaoInterface homeworkDao, StudentDaoInterface studentDao, StudentHomeworkDaoInterface studentHomeworkDao) {
+        this.homeworkDao = homeworkDao;
+        this.studentDao = studentDao;
+        this.studentHomeworkDao = studentHomeworkDao;
+    }
 
     public boolean addStudent(Student student) {
         return studentDao.addStudent(student);
