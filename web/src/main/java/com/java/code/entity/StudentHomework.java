@@ -1,11 +1,11 @@
-package com.java.code.model;
+package com.java.code.entity;
 
 import java.util.Date;
 
 /**
  * Project Name: Homework Management System
  * File Name: StudentHomework
- * Package Name: com.java.code.model
+ * Package Name: com.java.code.entity
  *
  * @author yipple
  * @date 2020/3/12

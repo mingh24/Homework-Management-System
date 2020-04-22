@@ -1,7 +1,7 @@
 package com.java.code.configuration;
 
-import com.java.code.jdbc.StudentDatabaseManager;
-import com.java.code.jdbc.TeacherDatabaseManager;
+import com.java.code.service.StudentService;
+import com.java.code.service.TeacherService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -18,13 +18,13 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public StudentDatabaseManager studentDatabaseManager() {
-        return new StudentDatabaseManager();
+    public StudentService studentService() {
+        return new StudentService();
     }
 
     @Bean
-    public TeacherDatabaseManager teacherDatabaseManager() {
-        return new TeacherDatabaseManager();
+    public TeacherService teacherService() {
+        return new TeacherService();
     }
 
 }

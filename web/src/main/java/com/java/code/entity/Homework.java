@@ -1,21 +1,23 @@
-package com.java.code.model;
+package com.java.code.entity;
 
 import java.util.Date;
 
 /**
  * Project Name: Homework Management System
- * File Name: Student
- * Package Name: com.java.code.model
+ * File Name: Homework
+ * Package Name: com.java.code.entity
  *
  * @author yipple
  * @date 2020/3/12
  * @since 0.0.1
  */
-public class Student {
+public class Homework {
 
     private Long id;
 
-    private String name;
+    private String title;
+
+    private String content;
 
     private Date createTime;
 
@@ -29,12 +31,20 @@ public class Student {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public Date getCreateTime() {

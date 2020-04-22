@@ -1,72 +1,25 @@
-package com.java.code.jdbc;
+package com.java.code.dao;
 
-import com.java.code.model.Homework;
-import com.java.code.model.Student;
-import com.java.code.model.StudentHomework;
+import com.java.code.entity.Homework;
+import com.java.code.jdbc.DatabasePool;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Project Name: Homework Management System
- * File Name: TeacherDatabaseManager
- * Package Name: com.java.code.jdbc
+ * Project Name: Homework-Management-System
+ * File Name: HomeworkDao
+ * Package Name: com.java.code.dao
  *
  * @author yipple
- * @date 2020/4/6
+ * @date 2020/4/22
  * @since 0.0.1
  */
-public class TeacherDatabaseManager {
+public class HomeworkDao implements HomeworkDaoInterface {
 
-    public boolean addStudent(Student student) {
-
-        String sqlString = "INSERT INTO s_student(id, name, create_time) values(?, ?, ?)";
-
-        int updatedRowNum = 0;
-        try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
-            try (PreparedStatement preparedStatement = connection.prepareStatement(sqlString)) {
-                preparedStatement.setLong(1, student.getId());
-                preparedStatement.setString(2, student.getName());
-                preparedStatement.setTimestamp(3, new Timestamp(student.getCreateTime().getTime()));
-                updatedRowNum = preparedStatement.executeUpdate();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return updatedRowNum > 0;
-
-    }
-
-    public List<Student> queryAllStudents() {
-
-        String sqlString = "SELECT * FROM s_student ORDER BY id, name, create_time";
-
-        List<Student> studentList = new ArrayList<>();
-        try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
-            try (Statement statement = connection.createStatement()) {
-                try (ResultSet resultSet = statement.executeQuery(sqlString)) {
-                    // 获取执行结果
-                    while (resultSet.next()) {
-                        Student student = new Student();
-                        student.setId(resultSet.getLong("id"));
-                        student.setName(resultSet.getString("name"));
-                        student.setCreateTime(resultSet.getTimestamp("create_time"));
-                        studentList.add(student);
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return studentList;
-
-    }
-
+    @Override
     public boolean addHomework(Homework homework) {
-
         String sqlString = "INSERT INTO s_homework(title, content, create_time) values(?, ?, ?)";
 
         int updatedRowNum = 0;
@@ -82,11 +35,48 @@ public class TeacherDatabaseManager {
         }
 
         return updatedRowNum > 0;
-
     }
 
-    public List<Homework> queryAllHomework() {
+    @Override
+    public boolean deleteHomework(Long homeworkId) {
+        String sqlString = "DELETE FROM s_homework WHERE id = ?";
 
+        int updatedRowNum = 0;
+        try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sqlString)) {
+                preparedStatement.setString(1, String.valueOf(homeworkId));
+                updatedRowNum = preparedStatement.executeUpdate();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return updatedRowNum > 0;
+    }
+
+    @Override
+    public boolean updateHomework(Homework homework) {
+        String sqlString = "UPDATE s_homework SET title = ?, content = ?, create_time = ?, update_time = ? WHERE id = ?";
+
+        int updatedRowNum = 0;
+        try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sqlString)) {
+                preparedStatement.setString(1, homework.getTitle());
+                preparedStatement.setString(2, homework.getContent());
+                preparedStatement.setTimestamp(3, new Timestamp(homework.getCreateTime().getTime()));
+                preparedStatement.setTimestamp(4, new Timestamp(homework.getUpdateTime().getTime()));
+                preparedStatement.setLong(5, homework.getId());
+                updatedRowNum = preparedStatement.executeUpdate();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return updatedRowNum > 0;
+    }
+
+    @Override
+    public List<Homework> getAllHomework() {
         String sqlString = "SELECT * FROM s_homework ORDER BY id, title, content, create_time";
 
         List<Homework> homeworkList = new ArrayList<>();
@@ -100,6 +90,7 @@ public class TeacherDatabaseManager {
                         homework.setTitle(resultSet.getString("title"));
                         homework.setContent(resultSet.getString("content"));
                         homework.setCreateTime(resultSet.getTimestamp("create_time"));
+                        homework.setUpdateTime(resultSet.getTimestamp("update_time"));
                         homeworkList.add(homework);
                     }
                 }
@@ -109,27 +100,23 @@ public class TeacherDatabaseManager {
         }
 
         return homeworkList;
-
     }
 
-    public List<StudentHomework> queryAllSubmittedSpecifiedHomework(String specifiedHomeworkId) {
+    @Override
+    public Homework getHomework(Long homeworkId) {
+        String sqlString = "SELECT * FROM s_homework WHERE id = " + homeworkId;
 
-        String sqlString = "SELECT * FROM s_student_homework WHERE homework_id=" + specifiedHomeworkId + " ORDER BY id, student_id, homework_id, homework_title, homework_content, create_time";
-
-        List<StudentHomework> studentHomeworkList = new ArrayList<>();
+        Homework homework = new Homework();
         try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
             try (Statement statement = connection.createStatement()) {
                 try (ResultSet resultSet = statement.executeQuery(sqlString)) {
                     // 获取执行结果
                     while (resultSet.next()) {
-                        StudentHomework studentHomework = new StudentHomework();
-                        studentHomework.setId(resultSet.getLong("id"));
-                        studentHomework.setStudentId(resultSet.getLong("student_id"));
-                        studentHomework.setHomeworkId(resultSet.getLong("homework_id"));
-                        studentHomework.setHomeworkTitle(resultSet.getString("homework_title"));
-                        studentHomework.setHomeworkContent(resultSet.getString("homework_content"));
-                        studentHomework.setCreateTime(resultSet.getTimestamp("create_time"));
-                        studentHomeworkList.add(studentHomework);
+                        homework.setId(resultSet.getLong("id"));
+                        homework.setTitle(resultSet.getString("title"));
+                        homework.setContent(resultSet.getString("content"));
+                        homework.setCreateTime(resultSet.getTimestamp("create_time"));
+                        homework.setUpdateTime(resultSet.getTimestamp("update_time"));
                     }
                 }
             }
@@ -137,7 +124,7 @@ public class TeacherDatabaseManager {
             e.printStackTrace();
         }
 
-        return studentHomeworkList;
+        return homework;
     }
 
 }

@@ -1,10 +1,10 @@
 package com.java.code.controller;
 
 import com.java.code.configuration.AppConfig;
-import com.java.code.jdbc.TeacherDatabaseManager;
-import com.java.code.model.Homework;
-import com.java.code.model.Student;
-import com.java.code.model.StudentHomework;
+import com.java.code.service.TeacherService;
+import com.java.code.entity.Homework;
+import com.java.code.entity.Student;
+import com.java.code.entity.StudentHomework;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -30,7 +30,7 @@ import java.util.List;
 public class TeacherController {
 
     ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-    TeacherDatabaseManager teacherDatabaseManager = applicationContext.getBean("teacherDatabaseManager", TeacherDatabaseManager.class);
+    TeacherService teacherService = applicationContext.getBean("teacherService", TeacherService.class);
 
     @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
     private String addStudent(@RequestParam(value = "id") String id, @RequestParam(value = "name") String name, Model model) {
@@ -40,7 +40,7 @@ public class TeacherController {
         student.setCreateTime(new Date());
 
         model.addAttribute("operation", "addStudent");
-        boolean result = teacherDatabaseManager.addStudent(student);
+        boolean result = teacherService.addStudent(student);
         model.addAttribute("result", result);
 
         return "../result.jsp";
@@ -48,7 +48,7 @@ public class TeacherController {
 
     @RequestMapping(value = "/queryAllStudents")
     private String queryAllStudents(Model model) {
-        List<Student> studentList = teacherDatabaseManager.queryAllStudents();
+        List<Student> studentList = teacherService.queryAllStudents();
         model.addAttribute("studentList", studentList);
 
         return "queryAllStudents.jsp";
@@ -62,7 +62,7 @@ public class TeacherController {
         homework.setCreateTime(new Date());
 
         model.addAttribute("operation", "addHomework");
-        boolean result = teacherDatabaseManager.addHomework(homework);
+        boolean result = teacherService.addHomework(homework);
         model.addAttribute("result", result);
 
         return "../result.jsp";
@@ -70,7 +70,7 @@ public class TeacherController {
 
     @RequestMapping(value = "/teacherQueryAllHomework")
     private String teacherQueryAllHomework(Model model) {
-        List<Homework> homeworkList = teacherDatabaseManager.queryAllHomework();
+        List<Homework> homeworkList = teacherService.queryAllHomework();
         model.addAttribute("homeworkList", homeworkList);
 
         return "teacherQueryAllHomework.jsp";
@@ -78,7 +78,7 @@ public class TeacherController {
 
     @RequestMapping(value = "/viewSubmittedSpecifiedHomeworkDetails")
     private String viewSubmittedSpecifiedHomeworkDetails(@RequestParam(value = "specifiedHomeworkId") String specifiedHomeworkId, Model model) {
-        List<StudentHomework> submittedSpecifiedHomework = teacherDatabaseManager.queryAllSubmittedSpecifiedHomework(specifiedHomeworkId);
+        List<StudentHomework> submittedSpecifiedHomework = teacherService.queryAllSubmittedSpecifiedHomework(specifiedHomeworkId);
         model.addAttribute("submittedSpecifiedHomework", submittedSpecifiedHomework);
 
         return "viewSubmittedSpecifiedHomeworkDetails.jsp";

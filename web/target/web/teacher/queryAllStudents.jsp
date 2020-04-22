@@ -1,4 +1,4 @@
-<%@ page import="com.java.code.model.Student" %>
+<%@ page import="com.java.code.entity.Student" %>
 <%@ page import="java.util.List" %>
 
 <%--

@@ -1,9 +1,9 @@
 package com.java.code.controller;
 
 import com.java.code.configuration.AppConfig;
-import com.java.code.jdbc.StudentDatabaseManager;
-import com.java.code.model.Homework;
-import com.java.code.model.StudentHomework;
+import com.java.code.service.StudentService;
+import com.java.code.entity.Homework;
+import com.java.code.entity.StudentHomework;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -29,11 +29,11 @@ import java.util.List;
 public class StudentController {
 
     ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-    StudentDatabaseManager studentDatabaseManager = applicationContext.getBean("studentDatabaseManager", StudentDatabaseManager.class);
+    StudentService studentService = applicationContext.getBean("studentService", StudentService.class);
 
     @RequestMapping(value = "/studentQueryAllHomework")
     private String studentQueryAllHomework(Model model) {
-        List<Homework> homeworkList = studentDatabaseManager.queryAllHomework();
+        List<Homework> homeworkList = studentService.queryAllHomework();
         model.addAttribute("homeworkList", homeworkList);
 
         return "studentQueryAllHomework.jsp";
@@ -41,7 +41,7 @@ public class StudentController {
 
     @RequestMapping(value = "/submitHomework", method = RequestMethod.GET)
     private String submitHomeworkGet(@RequestParam(value = "specifiedHomeworkId") String specifiedHomeworkId, Model model) {
-        Homework specifiedHomework = studentDatabaseManager.querySpecifiedHomework(specifiedHomeworkId);
+        Homework specifiedHomework = studentService.querySpecifiedHomework(specifiedHomeworkId);
 
         model.addAttribute("specifiedHomework", specifiedHomework);
 
@@ -58,7 +58,7 @@ public class StudentController {
         studentHomework.setCreateTime(new Date());
 
         model.addAttribute("operation", "submitHomework");
-        boolean result = studentDatabaseManager.submitStudentHomework(studentHomework);
+        boolean result = studentService.submitStudentHomework(studentHomework);
         model.addAttribute("result", result);
 
         return "../result.jsp";
