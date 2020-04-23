@@ -2,6 +2,8 @@ package com.java.code.jdbc;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,6 +18,7 @@ import java.util.Properties;
  * @date 2020/3/19
  * @since 0.0.1
  */
+@Component
 public class DatabasePool {
 
     private static HikariDataSource hikariDataSource;
@@ -47,6 +50,7 @@ public class DatabasePool {
         driverName = properties.getProperty("driver_name");
     }
 
+    @Bean("hikariDatasource")
     public static HikariDataSource getHikariDataSource() {
         if (null != hikariDataSource) {
             return hikariDataSource;

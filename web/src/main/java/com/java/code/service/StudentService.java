@@ -18,7 +18,7 @@ import java.util.List;
  * @since 0.0.1
  */
 @Service
-public class StudentService {
+public class StudentService implements StudentServiceInterface {
 
     private final HomeworkDaoInterface homeworkDao;
 
@@ -29,14 +29,17 @@ public class StudentService {
         this.studentHomeworkDao = studentHomeworkDao;
     }
 
+    @Override
     public boolean submitStudentHomework(StudentHomework studentHomework) {
         return studentHomeworkDao.addStudentHomework(studentHomework);
     }
 
+    @Override
     public List<Homework> queryAllHomework() {
         return homeworkDao.getAllHomework();
     }
 
+    @Override
     public Homework querySpecifiedHomework(String specifiedHomeworkId) {
         return homeworkDao.getHomework(Long.valueOf(specifiedHomeworkId));
     }
