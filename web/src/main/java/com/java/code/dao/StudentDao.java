@@ -26,12 +26,17 @@ public class StudentDao implements StudentDaoInterface {
 
         int updatedRowNum = 0;
         try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
+            connection.setAutoCommit(false);
             try (PreparedStatement preparedStatement = connection.prepareStatement(sqlString)) {
                 preparedStatement.setLong(1, student.getId());
                 preparedStatement.setString(2, student.getName());
                 preparedStatement.setTimestamp(3, new Timestamp(student.getCreateTime().getTime()));
                 updatedRowNum = preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                connection.rollback();
             }
+            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -45,10 +50,15 @@ public class StudentDao implements StudentDaoInterface {
 
         int updatedRowNum = 0;
         try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
+            connection.setAutoCommit(false);
             try (PreparedStatement preparedStatement = connection.prepareStatement(sqlString)) {
                 preparedStatement.setString(1, String.valueOf(studentId));
                 updatedRowNum = preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                connection.rollback();
             }
+            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -62,13 +72,18 @@ public class StudentDao implements StudentDaoInterface {
 
         int updatedRowNum = 0;
         try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
+            connection.setAutoCommit(false);
             try (PreparedStatement preparedStatement = connection.prepareStatement(sqlString)) {
                 preparedStatement.setString(1, student.getName());
                 preparedStatement.setTimestamp(2, new Timestamp(student.getCreateTime().getTime()));
                 preparedStatement.setTimestamp(3, new Timestamp(student.getUpdateTime().getTime()));
                 preparedStatement.setLong(4, student.getId());
                 updatedRowNum = preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                connection.rollback();
             }
+            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -82,6 +97,7 @@ public class StudentDao implements StudentDaoInterface {
 
         List<Student> studentList = new ArrayList<>();
         try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
+            connection.setAutoCommit(false);
             try (Statement statement = connection.createStatement()) {
                 try (ResultSet resultSet = statement.executeQuery(sqlString)) {
                     // 获取执行结果
@@ -94,7 +110,11 @@ public class StudentDao implements StudentDaoInterface {
                         studentList.add(student);
                     }
                 }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                connection.rollback();
             }
+            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -108,6 +128,7 @@ public class StudentDao implements StudentDaoInterface {
 
         Student student = new Student();
         try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
+            connection.setAutoCommit(false);
             try (Statement statement = connection.createStatement()) {
                 try (ResultSet resultSet = statement.executeQuery(sqlString)) {
                     // 获取执行结果
@@ -118,7 +139,11 @@ public class StudentDao implements StudentDaoInterface {
                         student.setUpdateTime(resultSet.getTimestamp("update_time"));
                     }
                 }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                connection.rollback();
             }
+            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }

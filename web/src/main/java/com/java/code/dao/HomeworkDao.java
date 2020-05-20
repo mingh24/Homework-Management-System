@@ -26,12 +26,17 @@ public class HomeworkDao implements HomeworkDaoInterface {
 
         int updatedRowNum = 0;
         try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
+            connection.setAutoCommit(false);
             try (PreparedStatement preparedStatement = connection.prepareStatement(sqlString)) {
                 preparedStatement.setString(1, homework.getTitle());
                 preparedStatement.setString(2, homework.getContent());
                 preparedStatement.setTimestamp(3, new Timestamp(homework.getCreateTime().getTime()));
                 updatedRowNum = preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                connection.rollback();
             }
+            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -45,10 +50,15 @@ public class HomeworkDao implements HomeworkDaoInterface {
 
         int updatedRowNum = 0;
         try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
+            connection.setAutoCommit(false);
             try (PreparedStatement preparedStatement = connection.prepareStatement(sqlString)) {
                 preparedStatement.setString(1, String.valueOf(homeworkId));
                 updatedRowNum = preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                connection.rollback();
             }
+            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -62,6 +72,7 @@ public class HomeworkDao implements HomeworkDaoInterface {
 
         int updatedRowNum = 0;
         try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
+            connection.setAutoCommit(false);
             try (PreparedStatement preparedStatement = connection.prepareStatement(sqlString)) {
                 preparedStatement.setString(1, homework.getTitle());
                 preparedStatement.setString(2, homework.getContent());
@@ -69,7 +80,11 @@ public class HomeworkDao implements HomeworkDaoInterface {
                 preparedStatement.setTimestamp(4, new Timestamp(homework.getUpdateTime().getTime()));
                 preparedStatement.setLong(5, homework.getId());
                 updatedRowNum = preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                connection.rollback();
             }
+            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -83,6 +98,7 @@ public class HomeworkDao implements HomeworkDaoInterface {
 
         List<Homework> homeworkList = new ArrayList<>();
         try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
+            connection.setAutoCommit(false);
             try (Statement statement = connection.createStatement()) {
                 try (ResultSet resultSet = statement.executeQuery(sqlString)) {
                     // 获取执行结果
@@ -96,7 +112,11 @@ public class HomeworkDao implements HomeworkDaoInterface {
                         homeworkList.add(homework);
                     }
                 }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                connection.rollback();
             }
+            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -110,6 +130,7 @@ public class HomeworkDao implements HomeworkDaoInterface {
 
         Homework homework = new Homework();
         try (Connection connection = DatabasePool.getHikariDataSource().getConnection()) {
+            connection.setAutoCommit(false);
             try (Statement statement = connection.createStatement()) {
                 try (ResultSet resultSet = statement.executeQuery(sqlString)) {
                     // 获取执行结果
@@ -121,7 +142,11 @@ public class HomeworkDao implements HomeworkDaoInterface {
                         homework.setUpdateTime(resultSet.getTimestamp("update_time"));
                     }
                 }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                connection.rollback();
             }
+            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }

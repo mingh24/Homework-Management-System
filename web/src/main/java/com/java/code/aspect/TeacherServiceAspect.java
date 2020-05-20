@@ -1,6 +1,6 @@
 package com.java.code.aspect;
 
-import com.java.code.jdbc.TransactionManager;
+import org.apache.log4j.Logger;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -22,11 +22,7 @@ import java.util.Arrays;
 @Component
 public class TeacherServiceAspect {
 
-    private final TransactionManager transactionManager;
-
-    public TeacherServiceAspect(TransactionManager transactionManager) {
-        this.transactionManager = transactionManager;
-    }
+    private static final Logger logger = Logger.getLogger(TeacherServiceAspect.class);
 
     @Pointcut("execution(public * com.java.code.service..TeacherService*.*(..))")
     public void matchedTeacherServiceMethod() {
@@ -34,25 +30,17 @@ public class TeacherServiceAspect {
 
     @Around("matchedTeacherServiceMethod()")
     public Object aroundServiceMethod(ProceedingJoinPoint pjp) {
-        System.out.println("-----Before teacherServiceMethod-----");
-
-        transactionManager.beginTransaction();
-
+        logger.debug("TeacherService中的方法被调用");
         Object result = null;
 
         try {
             Object[] args = pjp.getArgs();
-            System.out.println("方法参数：" + Arrays.toString(args));
-            System.out.println("被代理的对象：" + pjp.getTarget());
+            logger.debug("方法参数：" + Arrays.toString(args));
+            logger.debug("被代理的对象：" + pjp.getTarget());
             result = pjp.proceed(args);
-            System.out.println("-----After teacherServiceMethod returning-----");
-            transactionManager.commit();
+            logger.debug("结果：" + result);
         } catch (Throwable throwable) {
-            System.out.println("-----After teacherServiceMethod throwing-----");
-            transactionManager.rollback();
-            throwable.printStackTrace();
-        } finally {
-            System.out.println("-----Finally teacherServiceMethod-----");
+            logger.error(throwable.getMessage());
         }
 
         return result;
