@@ -31,12 +31,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/aspect/StudentServiceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/aspect/StudentServiceAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/aspect/TeacherServiceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/aspect/TeacherServiceAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/HomeworkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/HomeworkDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentHomeworkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentHomeworkDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/jdbc/TransactionManager.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="4.x" />
+        <entry key="$PROJECT_DIR$" value="5.x" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -241,8 +235,16 @@
       <workItem from="1589112010389" duration="3109000" />
       <workItem from="1589423448172" duration="521000" />
       <workItem from="1589439370861" duration="2817000" />
-      <workItem from="1589813598040" duration="1519000" />
+      <workItem from="1589813598040" duration="4102000" />
     </task>
+    <task id="LOCAL-00001" summary="使用切面记录日志">
+      <created>1589991534141</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589991534141</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +261,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="使用切面记录日志" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用切面记录日志" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="23" width="1024" height="836" key="#Project_Structure" timestamp="1587627121332">
@@ -423,11 +429,12 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="308" y="182" key="IDE.errors.dialog/0.23.1440.834@0.23.1440.834" timestamp="1586744178050" />
-    <state x="332" y="88" key="Maven.ArtifactSearchDialog" timestamp="1587700946381">
-      <screen x="0" y="23" width="1440" height="836" />
+    <state x="332" y="88" key="Maven.ArtifactSearchDialog" timestamp="1589991996428">
+      <screen x="0" y="23" width="1440" height="839" />
     </state>
     <state x="258" y="103" key="Maven.ArtifactSearchDialog/0.23.1440.834@0.23.1440.834" timestamp="1586593897884" />
     <state x="332" y="88" key="Maven.ArtifactSearchDialog/0.23.1440.836@0.23.1440.836" timestamp="1587700946381" />
+    <state x="332" y="88" key="Maven.ArtifactSearchDialog/0.23.1440.839@0.23.1440.839" timestamp="1589991996428" />
     <state x="221" y="23" width="1024" height="836" key="SettingsEditor" timestamp="1587624998964">
       <screen x="0" y="23" width="1440" height="836" />
     </state>
@@ -438,6 +445,10 @@
       <screen x="0" y="23" width="1440" height="836" />
     </state>
     <state width="520" height="445" key="SwitcherDM/0.23.1440.836@0.23.1440.836" timestamp="1587020332448" />
+    <state x="320" y="167" key="Vcs.Push.Dialog.v2" timestamp="1589991536895">
+      <screen x="0" y="23" width="1440" height="839" />
+    </state>
+    <state x="320" y="167" key="Vcs.Push.Dialog.v2/0.23.1440.839@0.23.1440.839" timestamp="1589991536895" />
     <state x="100" y="123" width="1240" height="634" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1586362088613">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
