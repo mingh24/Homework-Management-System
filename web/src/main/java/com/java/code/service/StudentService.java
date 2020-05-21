@@ -31,17 +31,17 @@ public class StudentService implements StudentServiceInterface {
 
     @Override
     public boolean submitStudentHomework(StudentHomework studentHomework) {
-        return studentHomeworkDao.addStudentHomework(studentHomework);
+        return studentHomeworkDao.insertStudentHomework(studentHomework);
     }
 
     @Override
     public List<Homework> queryAllHomework() {
-        return homeworkDao.getAllHomework();
+        return homeworkDao.selectAllHomework();
     }
 
     @Override
     public Homework querySpecifiedHomework(String specifiedHomeworkId) {
-        return homeworkDao.getHomework(Long.valueOf(specifiedHomeworkId));
+        return homeworkDao.selectHomeworkById(Long.valueOf(specifiedHomeworkId));
     }
 
 }

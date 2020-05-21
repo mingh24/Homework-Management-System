@@ -15,14 +15,14 @@ import java.util.List;
  */
 public interface HomeworkDaoInterface {
 
-    public boolean addHomework(Homework homework);
+    public boolean insertHomework(Homework homework);
 
     public boolean deleteHomework(Long homeworkId);
 
     public boolean updateHomework(Homework homework);
 
-    public List<Homework> getAllHomework();
+    public List<Homework> selectAllHomework();
 
-    public Homework getHomework(Long homeworkId);
+    public Homework selectHomeworkById(Long homeworkId);
 
 }

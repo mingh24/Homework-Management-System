@@ -34,27 +34,27 @@ public class TeacherService implements TeacherServiceInterface {
 
     @Override
     public boolean addStudent(Student student) {
-        return studentDao.addStudent(student);
+        return studentDao.insertStudent(student);
     }
 
     @Override
     public List<Student> queryAllStudents() {
-        return studentDao.getAllStudents();
+        return studentDao.selectAllStudents();
     }
 
     @Override
     public boolean addHomework(Homework homework) {
-        return homeworkDao.addHomework(homework);
+        return homeworkDao.insertHomework(homework);
     }
 
     @Override
     public List<Homework> queryAllHomework() {
-        return homeworkDao.getAllHomework();
+        return homeworkDao.selectAllHomework();
     }
 
     @Override
     public List<StudentHomework> queryAllSubmittedSpecifiedHomework(String specifiedHomeworkId) {
-        return studentHomeworkDao.getAllStudentHomeworkByHomeworkId(Long.valueOf(specifiedHomeworkId));
+        return studentHomeworkDao.selectAllStudentHomeworkByHomeworkId(Long.valueOf(specifiedHomeworkId));
     }
 
 }

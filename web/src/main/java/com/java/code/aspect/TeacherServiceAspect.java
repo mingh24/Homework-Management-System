@@ -30,19 +30,23 @@ public class TeacherServiceAspect {
 
     @Around("matchedTeacherServiceMethod()")
     public Object aroundServiceMethod(ProceedingJoinPoint pjp) {
+        logger.debug("-------------------------");
         logger.debug("TeacherService中的方法被调用");
         Object result = null;
 
         try {
+            logger.debug("方法签名：" + pjp.getSignature());
+            logger.debug("连接点类型：" + pjp.getKind());
             Object[] args = pjp.getArgs();
             logger.debug("方法参数：" + Arrays.toString(args));
             logger.debug("被代理的对象：" + pjp.getTarget());
             result = pjp.proceed(args);
-            logger.debug("结果：" + result);
+            logger.debug("执行结果：" + result);
         } catch (Throwable throwable) {
             logger.error(throwable.getMessage());
         }
 
+        logger.debug("-------------------------");
         return result;
     }
 }

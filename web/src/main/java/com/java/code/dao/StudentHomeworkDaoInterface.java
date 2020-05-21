@@ -15,18 +15,18 @@ import java.util.List;
  */
 public interface StudentHomeworkDaoInterface {
 
-    public boolean addStudentHomework(StudentHomework studentHomework);
+    public boolean insertStudentHomework(StudentHomework studentHomework);
 
     public boolean deleteStudentHomework(Long studentHomeworkId);
 
     public boolean updateStudentHomework(StudentHomework studentHomework);
 
-    public List<StudentHomework> getAllStudentHomework();
+    public List<StudentHomework> selectAllStudentHomework();
 
-    public List<StudentHomework> getAllStudentHomeworkByStudentId(Long studentId);
+    public List<StudentHomework> selectAllStudentHomeworkByStudentId(Long studentId);
 
-    public List<StudentHomework> getAllStudentHomeworkByHomeworkId(Long homeworkId);
+    public List<StudentHomework> selectAllStudentHomeworkByHomeworkId(Long homeworkId);
 
-    public StudentHomework getStudentHomework(Long studentHomeworkId);
+    public StudentHomework selectStudentHomeworkById(Long studentHomeworkId);
 
 }

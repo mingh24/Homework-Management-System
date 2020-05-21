@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.java.code.mapper.StudentMapper">
+    <resultMap id="studentResultMap" type="Student">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+    <insert id="insertStudent">
+        INSERT INTO s_student(id, name, create_time)
+        values (#{student.id}, #{student.name}, #{student.createTime})
+    </insert>
+
+    <delete id="deleteStudentById">
+        DELETE
+        FROM s_student
+        WHERE id = #{id}
+    </delete>
+
+    <update id="updateStudent">
+        UPDATE s_student
+        SET name        = #{student.name},
+            create_time = #{student.createTime},
+            update_time = #{student.updateTime}
+        WHERE id = #{id}
+    </update>
+
+    <select id="selectAllStudents" resultMap="studentResultMap">
+        SELECT *
+        FROM s_student
+        ORDER BY id, name, create_time, update_time
+    </select>
+
+    <select id="selectStudentById" resultMap="studentResultMap">
+        SELECT *
+        FROM s_student
+        WHERE id = #{id}
+    </select>
+</mapper>

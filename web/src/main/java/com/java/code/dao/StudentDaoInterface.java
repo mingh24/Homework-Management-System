@@ -15,14 +15,14 @@ import java.util.List;
  */
 public interface StudentDaoInterface {
 
-    public boolean addStudent(Student student);
+    public boolean insertStudent(Student student);
 
     public boolean deleteStudent(Long studentId);
 
     public boolean updateStudent(Student student);
 
-    public List<Student> getAllStudents();
+    public List<Student> selectAllStudents();
 
-    public Student getStudent(Long studentId);
+    public Student selectStudentById(Long studentId);
 
 }
