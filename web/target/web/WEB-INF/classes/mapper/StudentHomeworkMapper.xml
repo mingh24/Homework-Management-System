@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.java.code.mapper.StudentHomeworkMapper">
+    <resultMap id="studentHomeworkResultMap" type="StudentHomework">
+        <result property="id" column="id"/>
+        <result property="studentId" column="student_id"/>
+        <result property="homeworkId" column="homework_id"/>
+        <result property="homeworkTitle" column="homework_title"/>
+        <result property="homeworkContent" column="homework_content"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+    <insert id="insertStudentHomework">
+        INSERT INTO s_student_homework(student_id, homework_id, homework_title, homework_content, create_time)
+        values (#{studentHomework.studentId}, #{studentHomework.homeworkId}, #{studentHomework.homeworkTitle},
+                #{studentHomework.homeworkContent}, #{studentHomework.createTime})
+    </insert>
+
+    <delete id="deleteStudentHomeworkById">
+        DELETE
+        FROM s_student_homework
+        WHERE id = #{id}
+    </delete>
+
+    <update id="updateStudentHomework">
+        UPDATE s_student_homework
+        SET homework_title   = #{studentHomework.homeworkTitle},
+            homework_content = #{studentHomework.homeworkContent},
+            create_time      = #{studentHomework.createTime},
+            update_time      = #{studentHomework.updateTime}
+        WHERE id = #{studentHomework.id}
+    </update>
+
+    <select id="selectAllStudentHomework" resultMap="studentHomeworkResultMap">
+        SELECT *
+        FROM s_student_homework
+        ORDER BY homework_id, student_id, homework_title, homework_content, create_time
+    </select>
+
+    <select id="selectAllStudentHomeworkByStudentId" resultMap="studentHomeworkResultMap">
+        SELECT *
+        FROM s_student_homework
+        WHERE student_id = #{studentId}
+        ORDER BY homework_id, student_id, homework_title, homework_content, create_time
+    </select>
+
+    <select id="selectAllStudentHomeworkByHomeworkId" resultMap="studentHomeworkResultMap">
+        SELECT *
+        FROM s_student_homework
+        WHERE homework_id = #{homeworkId}
+        ORDER BY homework_id, student_id, homework_title, homework_content, create_time
+    </select>
+
+    <select id="selectStudentHomeworkById" resultMap="studentHomeworkResultMap">
+        SELECT *
+        FROM s_student_homework
+        WHERE id = #{id}
+        ORDER BY homework_id, student_id, homework_title, homework_content, create_time
+    </select>
+</mapper>
