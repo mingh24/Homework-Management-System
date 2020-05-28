@@ -34,6 +34,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a130c784-7118-4dd0-be91-feb643268316" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_5_28,_11_56_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_5_28,_11_56_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2020_5_28__11_56__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/5.x aspect包结构.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/5.x controller包结构.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/5.x dao包结构.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/5.x entity包结构.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/5.x jdbc包结构.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/5.x service包结构.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/5.x交互设计.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/5.x项目结构.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -242,6 +253,14 @@
       <workItem from="1589439370861" duration="2817000" />
       <workItem from="1589813598040" duration="1519000" />
     </task>
+    <task id="LOCAL-00001" summary="更新README">
+      <created>1590641291088</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590641291089</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +277,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新README" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新README" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="23" width="1024" height="836" key="#Project_Structure" timestamp="1587627121332">
@@ -437,6 +460,10 @@
       <screen x="0" y="23" width="1440" height="836" />
     </state>
     <state width="520" height="445" key="SwitcherDM/0.23.1440.836@0.23.1440.836" timestamp="1587020332448" />
+    <state x="320" y="167" key="Vcs.Push.Dialog.v2" timestamp="1590641294320">
+      <screen x="0" y="23" width="1440" height="840" />
+    </state>
+    <state x="320" y="167" key="Vcs.Push.Dialog.v2/0.23.1440.840@0.23.1440.840" timestamp="1590641294320" />
     <state x="100" y="123" width="1240" height="634" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1586362088613">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
