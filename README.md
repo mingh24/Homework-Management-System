@@ -1,6 +1,6 @@
 # Homework-Management-System
 
-一个基于Tomcat, Spring, JSP的简单作业管理系统，通过Maven管理依赖，使用HikariCP数据库连接池。
+一个基于Tomcat, Spring, JSP的简单作业管理系统，通过Maven管理依赖，使用MyBatis持久化框架以及HikariCP数据库连接池。
 
 ## 环境
 
@@ -9,6 +9,8 @@
  - Java SE 11.0.5 LTS
  - MySQL 8.0.19
  - MySQL Connector for Java 8.0.19
+ - Mybatis 3.5.4
+ - Mybatis-Spring 2.0.4 
  - HikariCP 3.4.2
  - Apache-Tomcat 8.5.51
  - Apache-Maven 3.6.1
@@ -22,28 +24,44 @@
 
 ### 项目结构
 
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/4.x/images/4.x项目结构.png)
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/6.x/images/6.x项目结构.png)
 
 <br>
 
-- configuration包结构
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/4.x/images/4.x%20configuration包结构.png)
+
+- aspect包结构
+
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/5.x/images/5.x%20aspect包结构.png)
 
 <br>
 
 - controller包结构
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/3.x/images/3.x%20controller包结构.png)
+
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/5.x/images/5.x%20controller包结构.png)
 
 <br>
 
-- jdbc包结构
-  ![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/4.x/images/4.x%20jdbc包结构.png)
+- dao包结构
+
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/6.x/images/6.x%20dao包结构.png)
 
 <br>
 
-- model包结构
+- entity包结构
 
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/2.x/images/model包结构.png)
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/5.x/images/5.x%20entity包结构.png)
+
+<br>
+
+- mapper包结构
+
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/6.x/images/6.x%20mapper包结构.png)
+
+<br>
+
+- service包结构
+
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/5.x/images/5.x%20service包结构.png)
 
 <br>
 
@@ -55,6 +73,6 @@
 
 ### 交互结构
 
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/4.x/images/4.x交互设计.png)
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/6.x/images/6.x交互设计.png)
 
 <br>

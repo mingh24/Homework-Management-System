@@ -24,38 +24,18 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:6.x" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a130c784-7118-4dd0-be91-feb643268316" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/aspect/StudentServiceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/aspect/StudentServiceAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/aspect/TeacherServiceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/aspect/TeacherServiceAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/HomeworkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/HomeworkDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/HomeworkDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/HomeworkDaoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentDaoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentHomeworkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentHomeworkDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentHomeworkDaoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentHomeworkDaoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/jdbc/DatabasePool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/mapper/HomeworkMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/mapper/HomeworkMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/mapper/StudentHomeworkMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/mapper/StudentHomeworkMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/service/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/dispatcher-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/META-INF/web.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/classes/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,6 +251,7 @@
       <workItem from="1589439370861" duration="2817000" />
       <workItem from="1589813598040" duration="7723000" />
       <workItem from="1590033538714" duration="18740000" />
+      <workItem from="1590641778772" duration="904000" />
     </task>
     <task id="LOCAL-00001" summary="使用切面记录日志">
       <created>1589991534141</created>
@@ -297,7 +278,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="6.x" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -542,6 +535,10 @@
     </state>
     <state x="375" y="204" width="845" height="472" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1586363616300" />
     <state x="375" y="204" width="845" height="486" key="find.popup/0.23.1440.836@0.23.1440.836" timestamp="1588004585861" />
+    <state x="336" y="163" key="git4idea.branch.GitSmartOperationDialog" timestamp="1590641867859">
+      <screen x="0" y="23" width="1440" height="840" />
+    </state>
+    <state x="336" y="163" key="git4idea.branch.GitSmartOperationDialog/0.23.1440.840@0.23.1440.840" timestamp="1590641867859" />
     <state x="97" y="140" key="new project wizard" timestamp="1585072002794">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
