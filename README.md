@@ -11,6 +11,7 @@
  - MySQL Connector for Java 8.0.19
  - HikariCP 3.4.2
  - Apache-Tomcat 8.5.51
+ - Aspectjrt 1.9.5
  - Apache-Maven 3.6.1
  - Spring 5.2.3
 
@@ -22,28 +23,38 @@
 
 ### 项目结构
 
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/4.x/images/4.x项目结构.png)
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/5.x/images/5.x项目结构.png)
 
 <br>
 
-- configuration包结构
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/4.x/images/4.x%20configuration包结构.png)
+- aspect包结构
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/5.x/images/5.x%20aspect包结构.png)
 
 <br>
 
 - controller包结构
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/3.x/images/3.x%20controller包结构.png)
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/5.x/images/5.x%20controller包结构.png)
+
+<br>
+
+- dao包结构
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/5.x/images/5.x%20dao包结构.png)
+
+<br>
+
+- entity包结构
+
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/5.x/images/5.x%20entity包结构.png)
 
 <br>
 
 - jdbc包结构
-  ![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/4.x/images/4.x%20jdbc包结构.png)
+  ![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/5.x/images/5.x%20jdbc包结构.png)
 
 <br>
 
-- model包结构
-
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/2.x/images/model包结构.png)
+- service包结构
+  ![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/5.x/images/5.x%20service包结构.png)
 
 <br>
 
@@ -55,6 +66,6 @@
 
 ### 交互结构
 
-![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/4.x/images/4.x交互设计.png)
+![在这里插入图片描述](https://github.com/Yi1275432232/Homework-Management-System/blob/5.x/images/5.x交互设计.png)
 
 <br>

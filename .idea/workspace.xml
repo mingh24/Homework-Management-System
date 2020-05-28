@@ -24,19 +24,18 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:6.x" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a130c784-7118-4dd0-be91-feb643268316" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/aspect/StudentServiceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/aspect/StudentServiceAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/aspect/TeacherServiceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/aspect/TeacherServiceAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/HomeworkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/HomeworkDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentHomeworkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/java/code/dao/StudentHomeworkDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/java/code/jdbc/TransactionManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="4.x" />
+        <entry key="$PROJECT_DIR$" value="6.x" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
